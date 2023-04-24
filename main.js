@@ -20,7 +20,7 @@ async function funcionMostrar() {
                                                             <p>Gender: ${val.gender}</p>
                                                         </div>
                                                     </div>
-                                                  `).join("")};
+                                                  `).join("")}
                         `
             document.querySelector("#containerCards").innerHTML = plantilla;
 }
@@ -37,7 +37,8 @@ async function buscar() {
                                                         <p>Gender: ${val.gender}</p>
                                                         </div>
                                                     </div>
-                                                  `).join("")}`;
+                                                  `).join("")}
+                        `
             document.querySelector("#containerCards").innerHTML = plantilla;
 }
 
