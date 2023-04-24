@@ -25,6 +25,7 @@ body{
 
 h1{
     font-size:5rem;
+    text-align: center;
     text-shadow: 0 0 14px #ffff00;
     color: #00ffff;
     animation: title 1s infinite;
@@ -136,4 +137,25 @@ main{
     animation: title 1s infinite;
     font-family: 'Delicious Handrawn', cursive;
     text-decoration: none; 
+}
+
+@media (max-width: 500px) {
+    .imagen {
+        width: 100%;
+        height: 60%;
+        background-repeat: no-repeat;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .finder-character{
+        width: 80%;
+        height: 0.2rem;
+    }
+
+    .footer{
+        font-size: 2rem;
+    }
 }
