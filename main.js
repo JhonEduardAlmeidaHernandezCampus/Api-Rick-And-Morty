@@ -1,4 +1,6 @@
 import myPagina from "./components/myPagina.js";
 
-myPagina.funcionFragment();
+let URL1 = "https://rickandmortyapi.com/api/character"
+
+myPagina.funcionFragment(URL1);
 myPagina.functionBuscardor();

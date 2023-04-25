@@ -2,6 +2,7 @@ import api from "../components/api.js";
 export let wsMyApi = {
 
     async funcionMostrar(urlApi) {
+        console.log(urlApi)
         let datos = await api.getApi(urlApi);
             let plantilla = `${datos.map((val, id) => `
                                                         <div class="card-character">
@@ -17,8 +18,19 @@ export let wsMyApi = {
                return plantilla;
     },
 
+    botones(page) {
+        console.log(page)
+        let plantilla =`
+                        <button id="previous">Previous</button>
+                            <h1>Page ${page}</h1>
+                        <button id="next">Next</button>
+                       `
+            return plantilla
+    },
+
+
+
     async buscar(informacion) {
-    
         let datos = await api.getApi(informacion.api + informacion.name);
             let plantilla = `${datos.map((val, id) => `
                                                         <div class="card-character">

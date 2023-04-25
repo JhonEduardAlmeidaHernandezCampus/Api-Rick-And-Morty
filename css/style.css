@@ -117,6 +117,32 @@ main{
     color: #00ffff;
 }
 
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.botones h1{
+    font-size: 30px;
+    text-shadow: 0 0 14px #051212;
+    color: #1cde0e;
+    animation: none;
+}
+
+.botones button{
+    width: 10%;
+    padding: 10px;
+    font-family: 'Delicious Handrawn', cursive;
+    background-color: transparent;
+    color: white;
+    border: none;
+    box-shadow: 5px 5px 10px #00ffff;
+    cursor: pointer;
+}
+
 .footer{
     display: flex;
     position: fixed;
