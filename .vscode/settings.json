@@ -1,6 +1,5 @@
 {
     "conventionalCommits.scopes": [
-        "Worker",
-        "Botones next and Previous"
+        "Boton Previous"
     ]
 }
