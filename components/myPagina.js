@@ -1,8 +1,11 @@
 export default {
     
-    
     URL2: "https://rickandmortyapi.com/api/character/?name=",
-    URL4: "https://rickandmortyapi.com/api/character/?species=human",
+    human:"human",
+    alien:"alien",
+    male:"male",
+    female:"female",
+    unknown:"unknown",
     page: 1,
 
     funcionFragment(URL){
@@ -20,7 +23,8 @@ export default {
 
             ws.terminate();
 
-            // this.funcionFilterGender();
+            this.funcionFiltrarSpecies();
+            this.funcionFiltrarGender();
             this.functionBuscardor();
             this.mostrarBotones();
         })
@@ -67,7 +71,6 @@ export default {
             ws.terminate();
 
             this.funcionamientoBotones()
-            
         })
 
     },
@@ -97,41 +100,53 @@ export default {
 
     },
 
+    funcionFiltrarSpecies(){
+        let specie = document.querySelector("#specie");
 
-    /*
-    funcionFilterGender(){
-    
-        const ws = new Worker("storage/wsMyPagina.js", {type: "module"});
+        specie.addEventListener("change", (e) => {
+            if(specie.value == "nothing"){
 
-        ws.postMessage({module: "filtrar", data: this.URL4})
+                location.reload();
 
-        ws.addEventListener("message", (e) => {
-            let doc = new DOMParser().parseFromString(e.data, "text/html")
+            } else if(specie.value == "human"){
 
-            let containerCards = document.querySelector("#containerCards")
-            containerCards.innerHTML = null;
-            containerCards.append(...doc.body.children)
+                let specieHuman = `https://rickandmortyapi.com/api/character/?species=${this.human}`;
+                this.funcionFragment(specieHuman);
 
-            ws.terminate();
+            } else if(specie.value == "alien"){
 
-            this.funcionamientoFiltrar();
+                let specieAlien = `https://rickandmortyapi.com/api/character/?species=${this.alien}`;
+                this.funcionFragment(specieAlien);
+
+            }
         })
-
     },
 
-    funcionamientoFiltrar(){
+    funcionFiltrarGender(){
         let gender = document.querySelector("#gender");
 
         gender.addEventListener("change", (e) => {
-            if(gender.value == "male"){
-                let URL4 = `https://rickandmortyapi.com/api/character/?species=human`;
-                this.funcionFragment(URL4);
-                
+            if(gender.value == "nothing"){
+
+                location.reload();
+
+            } else if(gender.value == "male"){
+
+                let genderMale = `https://rickandmortyapi.com/api/character/?gender=${this.male}`;
+                this.funcionFragment(genderMale);
+
             } else if(gender.value == "female"){
-                console.log("2")
+
+                let genderFemale = `https://rickandmortyapi.com/api/character/?gender=${this.female}`;
+                this.funcionFragment(genderFemale);
+
+            } else if(gender.value == "unknown"){
+
+                let genderUnknown = `https://rickandmortyapi.com/api/character/?gender=${this.unknown}`;
+                this.funcionFragment(genderUnknown);
+
             }
         })
     }
-    */
     
 }

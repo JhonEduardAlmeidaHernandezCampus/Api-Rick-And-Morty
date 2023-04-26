@@ -67,7 +67,7 @@ hr{
 }
 
 .finder-character{
-    width: 30rem;
+    width: 40%;
     height: 1rem;
     font-size: 1.5rem;
     border-radius: 20px;
@@ -93,6 +93,7 @@ hr{
     font-family: 'Delicious Handrawn', cursive;
     background-color: transparent;
     color: white;
+    outline: none;
     border: none;
     box-shadow: 5px 5px 10px #00ffff;
 }
@@ -100,7 +101,6 @@ hr{
 .filters option{
     font-size: 15px;
     color: black;
-    
 }
 
 .container-cards{
@@ -211,6 +211,20 @@ hr{
     
     .contenedorCards h1::after{
         font-size:5rem;
+    }
+
+    .filters{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filters .elecciones{
+        width: 30%;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .filters .finder-character{
+        width: 80%;
     }
 }
 
